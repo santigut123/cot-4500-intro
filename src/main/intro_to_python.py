@@ -1,13 +1,13 @@
 import numpy as num
 def main():
     matrix = x_equals_y(3)
-    print(matrix)
+    printMatrix(matrix)
     print("")
     matrix = step_2_transform(matrix)
-    print(matrix)
+    printMatrix(matrix)
     print("")
     matrix = step_3_transform(matrix)
-    print(matrix)
+    printMatrix(matrix)
     print("")
     
 
@@ -30,6 +30,12 @@ def step_2_transform(arr):
 def step_3_transform(arr):
     arr = num.delete(arr,2,1)
     return arr
+def printMatrix(arr):
+    for x in range(len(arr)):
+        for y in range(len(arr[0])):
+            print(arr[x,y], end=" ")
+        print("")
+    return
 
 main()
 
